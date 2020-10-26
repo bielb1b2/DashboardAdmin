@@ -18,6 +18,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-switch": "^5.0.1",
+    "recharts": "^1.8.5",
     "styled-components": "^5.2.0",
     "typescript": "~3.7.2",
     "uuid": "^8.3.1",
@@ -46,6 +47,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.6",
+    "@types/recharts": "^1.8.16",
     "@types/uuid": "^8.3.0"
   }
 }
