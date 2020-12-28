@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 
 import ContentHeader from '../../components/ContentHeader';
 import SelectInput from '../../components/SelectInput';
@@ -296,7 +296,7 @@ const Dashboard: React.FC = () => {
 
     }, [monthSelected, yearSelected]);
 
-    const handleMonthSelected = (month: string) => {
+    const handleMonthSelected = useCallback((month: string) => {
         try {
             const parseMonth = Number(month);
             setMonthSelected(parseMonth);
@@ -305,9 +305,9 @@ const Dashboard: React.FC = () => {
 
         }
 
-    }
+    }, []);
 
-    const handleYearSelected = (month: string) => {
+    const handleYearSelected = useCallback((month: string) => {
         try {
             const parseYear = Number(month);
             setYearSelected(parseYear);
@@ -316,9 +316,8 @@ const Dashboard: React.FC = () => {
 
         }
 
-    }
+    }, []);
 
-    console.log(relationExpensevesRecurrentVersusEventual)
 
 
     return (
